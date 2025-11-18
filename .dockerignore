@@ -1,0 +1,13 @@
+__pycache__
+.pytest_cache
+.mypy_cache
+.venv
+env
+venv
+.idea
+.vscode
+ecommerce.db
+*.pyc
+Dockerfile
+README.md
+.git
