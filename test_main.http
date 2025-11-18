@@ -1,0 +1,64 @@
+### --------- ITEMS ---------
+# Create new item
+POST http://127.0.0.1:8000/items?name=Laptop&price=45000&stock=10
+Accept: application/json
+
+###
+
+# Create another item
+POST http://127.0.0.1:8000/items?name=Mouse&price=500&stock=30
+Accept: application/json
+
+###
+
+# Get all items
+GET http://127.0.0.1:8000/items
+Accept: application/json
+
+###
+
+# Get specific item (id=1)
+GET http://127.0.0.1:8000/items/1
+Accept: application/json
+
+###
+
+# Update item (id=1 → change price and stock)
+PUT http://127.0.0.1:8000/items/1?price=40000&stock=15
+Accept: application/json
+
+###
+
+# Delete item (id=2)
+DELETE http://127.0.0.1:8000/items/2
+Accept: application/json
+
+
+### --------- ORDERS ---------
+# Get all orders
+GET http://127.0.0.1:8000/orders
+Accept: application/json
+
+###
+
+# Get specific order (id=1)
+GET http://127.0.0.1:8000/orders/1
+Accept: application/json
+
+###
+
+# Create new order (buy 2 of item 1)
+POST http://127.0.0.1:8000/orders?item_id=1&quantity=2
+Accept: application/json
+
+###
+
+# Update an order (id=1 → quantity=3, status=shipped)
+PUT http://127.0.0.1:8000/orders/1?quantity=3&status=shipped
+Accept: application/json
+
+###
+
+# Delete an order (id=1)
+DELETE http://127.0.0.1:8000/orders/1
+Accept: application/json
