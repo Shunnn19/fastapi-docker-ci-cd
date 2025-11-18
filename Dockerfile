@@ -2,7 +2,7 @@ FROM python:3.10
 
 WORKDIR /app
 COPY . .
-RUN pip install fastapi uvicorn[standard] sqlalchemy "pydantic[email]"
+RUN pip install --no-cache-dir fastapi uvicorn[standard] sqlalchemy "pydantic[email]"
 
 
 EXPOSE 8000
